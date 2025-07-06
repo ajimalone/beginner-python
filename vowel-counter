@@ -1,0 +1,15 @@
+user_input = input("Input: ")
+
+vowels = "aeiou"
+vowel_counts = {v: 0 for v in vowels}
+
+for char in user_input.lower():
+    if char in vowels:
+        vowel_counts[char] += 1
+
+total_vowels = sum(vowel_counts.values())
+
+print("Outputt: ")
+print(f"Total vowels: {total_vowels}")
+for v in vowels:
+    print(f"{v}: {vowel_counts[v]}")
